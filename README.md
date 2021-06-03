@@ -1,4 +1,4 @@
-# TruongFI Pihole
+# Docker Pihole DOH Proxy
 
 ## Deploy
 
