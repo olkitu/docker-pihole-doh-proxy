@@ -6,8 +6,7 @@ services:
     ports:
     - 8080:80
   doh-proxy:
-    build:
-      context: ./doh-proxy
+    image: ghcr.io/olkitu/docker-doh-httpproxy:main
     command: "--upstream-resolver 1.1.1.1 --level DEBUG"
   pihole:
     image: pihole/pihole
