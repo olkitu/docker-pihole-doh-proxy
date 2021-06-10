@@ -1,10 +1,11 @@
 version: '2.4'
 services:
   nginx:
-    build:
-      context: ./nginx
+    image: nginx:alpine
     ports:
     - 8080:80
+    volumes:
+    - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
   doh-proxy:
     image: ghcr.io/olkitu/docker-doh-httpproxy:main
     command: "--upstream-resolver 1.1.1.1 --level DEBUG"
